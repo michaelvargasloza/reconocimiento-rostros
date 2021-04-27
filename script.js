@@ -6,9 +6,9 @@ Promise.all([
   faceapi.nets.faceLandmark68Net.loadFromUri('/test-login/models'),
   faceapi.nets.ssdMobilenetv1.loadFromUri('/test-login/models')*/
 
-  faceapi.nets.faceRecognitionNet.loadFromUri('http://18.190.65.182/test-login/models'),
-  faceapi.nets.faceLandmark68Net.loadFromUri('http://18.190.65.182/test-login/models'),
-  faceapi.nets.ssdMobilenetv1.loadFromUri('http://18.190.65.182/test-login/models')
+  faceapi.nets.faceRecognitionNet.loadFromUri('https://raw.githubusercontent.com/michaelvargasloza/reconocimiento-rostros/master/models'),
+  faceapi.nets.faceLandmark68Net.loadFromUri('https://raw.githubusercontent.com/michaelvargasloza/reconocimiento-rostros/master/models'),
+  faceapi.nets.ssdMobilenetv1.loadFromUri('https://raw.githubusercontent.com/michaelvargasloza/reconocimiento-rostros/master/models')
 ]).then(startVideo)
 
 function startVideo(){
