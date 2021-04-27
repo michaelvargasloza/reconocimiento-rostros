@@ -2,9 +2,13 @@ const video = document.getElementById('video');
 
 /*Verificar si estan bien las direcciones, generalmente aqui hay un problema*/
 Promise.all([
-  faceapi.nets.faceRecognitionNet.loadFromUri('/test-login/models'),
+  /*faceapi.nets.faceRecognitionNet.loadFromUri('/test-login/models'),
   faceapi.nets.faceLandmark68Net.loadFromUri('/test-login/models'),
-  faceapi.nets.ssdMobilenetv1.loadFromUri('/test-login/models')
+  faceapi.nets.ssdMobilenetv1.loadFromUri('/test-login/models')*/
+
+  faceapi.nets.faceRecognitionNet.loadFromUri('/reconocimiento-rostros/models'),
+  faceapi.nets.faceLandmark68Net.loadFromUri('/reconocimiento-rostros/models'),
+  faceapi.nets.ssdMobilenetv1.loadFromUri('/reconocimiento-rostros/models')
 ]).then(startVideo)
 
 function startVideo(){
