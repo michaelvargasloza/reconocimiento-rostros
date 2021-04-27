@@ -65,7 +65,8 @@ function loadLabeledImages() {
       for(let i=1; i<=2; i++) {
         //const img = await faceapi.fetchImage(`/test-login/labeled_images/${label}/${i}.jpg`)
         //const img = await faceapi.fetchImage(`http://18.190.65.182/test-login/labeled_images/${label}/${i}.jpg`)
-        const img = await faceapi.fetchImage(`https://raw.githubusercontent.com/michaelvargasloza/reconocimiento-imagenes/master/labeled_images/${label}/${i}.jpg`)
+        //const img = await faceapi.fetchImage(`https://raw.githubusercontent.com/michaelvargasloza/reconocimiento-imagenes/master/labeled_images/${label}/${i}.jpg`)
+        const img = await faceapi.fetchImage(`https://raw.githubusercontent.com/michaelvargasloza/reconocimiento-rostros/master/labeled_images/${label}/${i}.jpg`)
         const detections = await faceapi.detectSingleFace(img).withFaceLandmarks().withFaceDescriptor()
         descriptions.push(detections.descriptor)
       }
